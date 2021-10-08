@@ -1,9 +1,12 @@
 <div class="centered-display">
   <div class="title">
     <h1>Simple Vote Counter</h1>
+    <h3>Kandidat : {{nomineeName}}</h3>
   </div>
   <div class="body">
-    <h3>Kandidat : </h3>
-    <app-child [nominee]="nomineeName"></app-child>
+    <p>Total setuju: {{agreed}}</p>
+    <p>Total tidak setuju: {{disagreed}}</p>
+    <app-child
+      (voted)="onVotedChanges($event)"></app-child>
   </div>
 </div>

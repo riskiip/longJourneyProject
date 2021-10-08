@@ -8,4 +8,11 @@ import {Component} from '@angular/core';
 export class AppComponent {
   title = 'angularProject';
   nomineeName: string = 'Conny';
+  agreed = 0;
+  disagreed = 0;
+
+  onVotedChanges(agree: boolean) {
+    agree ? this.agreed++ : this.disagreed++;
+  }
+
 }
